@@ -102,12 +102,12 @@
         }
 
         .home-image img {
-            display: flex;
-            justify-content: center;
-            margin-top: -1.5rem;
-            max-width: 120%; /* Makes the image responsive */
-            height: auto; /* Maintains the image's aspect ratio */
-            margin-bottom: 2rem; /* Add distance below the image */
+                width: 100vw; /* Make the image span the full viewport width */
+                object-fit: cover; /* Ensures the image covers the entire space without distortion */
+                display: block; /* Removes unwanted extra spaces */
+                margin: 0 auto; /* Centers the image */
+                margin-top: -1.5rem;
+                margin-bottom: 2rem; /* Add distance below the image */
         }
 
         .home-aka img {
