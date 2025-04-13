@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+    
         html, body {
             font-family: 'Khmer MN', serif;
             background-color: #ffffff;
@@ -66,11 +67,13 @@
             font-size: 1.5rem;
             }
         }
+        
         nav {
             background-color: #bac3c4ff;
             padding: 0.5rem 0;
             text-align: center;
         }
+        
         nav a {
             color: #222d2e; !important;
             margin: 0 1rem;
@@ -80,6 +83,7 @@
             cursor: pointer;
             font-family: 'Roboto', Tahoma, Arial, sans-serif;
         }
+        
         nav a:hover {
             text-decoration: underline;
         }
@@ -146,53 +150,6 @@
             padding: 1rem;
             width: 100%;
 	    /* position: relative; */
-        }
-
-        .team-member {
-            display: flex;
-            align-items: flex-start; /* Vertically aligns the photo and text */
-            margin-bottom: 2rem; /* Adds space below each team member */
-            margin-left: -15rem; /* Adds space below each team member */
-            width: 100%; /* Adjust the width as needed to control text width */
-        }
-
-        .team-photo {
-            width: 100px; /* Adjust the size of the photo */
-            height: auto;
-            border-radius: 0%; /* Makes the photo circular */
-            margin-right: 2rem; /* Adds space between the photo and the text */
-            margin-left: 29rem; /* Adds space below each team member */
-
-        }
-
-        .team-text p {
-            line-height: 1.1; /* Reduces the vertical space between lines */
-        }
-
-        * {
-            border: 0 !important;
-            outline: 0 !important;
-            box-shadow: none !important;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .team-member {
-                flex-direction: column; /* Stack photo and text vertically */
-                align-items: center; /* Center items */
-                margin-left: 0; /* Remove any margins */
-            }
-
-            .team-photo {
-                width: 100px; /* Smaller photo on small screens */
-                margin-right: 0; /* No right margin needed when stacking vertically */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .team-photo {
-                width: 80px; /* Even smaller for mobile */
-            }
         }
         
         /* General responsive layout */
