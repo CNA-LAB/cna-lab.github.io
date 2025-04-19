@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computational Neuroanatomy Lab</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-    
-        html, body {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Computational Neuroanatomy Lab
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   html, body {
             font-family: 'Khmer MN', serif;
             background-color: #ffffff;
             color: #343a40;
@@ -224,6 +225,56 @@
                 font-size: 1rem;
             }
         }
+        
+        .research-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    gap: 20px;
+}
+
+.project-text {
+    flex: 1;
+    font-size: 0.95rem;
+    color: #333;
+    text-align: left;
+}
+
+.project-image img {
+    width: auto;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Responsive stacking on small screens */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-text {
+        text-align: center;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+}
 
         /* Extra small devices like phones (max-width: 480px) */
         @media (max-width: 480px) {
@@ -243,13 +294,9 @@
                 padding: 0.5rem;
             }
         }
-        
-    </style>
-    
-    
-    
-    <script>
-        function showTab(tabId) {
+  </style>
+  <script>
+   function showTab(tabId) {
             var sections = document.getElementsByClassName('section');
             for (var i = 0; i < sections.length; i++) {
                 sections[i].classList.remove('active');
@@ -324,91 +371,130 @@
             showTab('home');
             loadContent(); // Load external content when the page loads
         }
-    </script>
-</head>
-
-<body>
-
-    <header>
-    	<img src="images/logo.png?v=2" alt="Lab Logo" class="logo">
-    	<div class="header-text">
-              <h1>Computational Neuroanatomy Lab</h1>
-              <p>Advancing Brain Microstructure Mapping</p>
-    	</div>
-    </header>
-        
-    <nav>
-        <a onclick="showTab('home')">HOME</a>
-        <a onclick="showTab('team')">TEAM</a>
-	<a onclick="showTab('research')">RESEARCH</a>
-        <a onclick="showTab('publications')">PUBLICATIONS</a>
-	<a onclick="showTab('resources')">RESOURCES</a>
-        <a onclick="showTab('contact')">CONTACT</a>
-    </nav>
-    
-    <div class="content">
-	<div id="home" class="section active">
-    	<div class="home-content">
-	<div class="home-image">
-            <img src="images/header.jpg" alt="EM Seg" />
+  </script>
+ </head>
+ <body>
+  <header>
+   <img alt="Lab Logo" class="logo" src="images/logo.png?v=2"/>
+   <div class="header-text">
+    <h1>
+     Computational Neuroanatomy Lab
+    </h1>
+    <p>
+     Advancing Brain Microstructure Mapping
+    </p>
+   </div>
+  </header>
+  <nav>
+   <a onclick="showTab('home')">
+    HOME
+   </a>
+   <a onclick="showTab('team')">
+    TEAM
+   </a>
+   <a onclick="showTab('research')">
+    RESEARCH
+   </a>
+   <a onclick="showTab('publications')">
+    PUBLICATIONS
+   </a>
+   <a onclick="showTab('resources')">
+    RESOURCES
+   </a>
+   <a onclick="showTab('contact')">
+    CONTACT
+   </a>
+  </nav>
+  <div class="content">
+   <div class="section active" id="home">
+    <div class="home-content">
+     <div class="home-image">
+      <img alt="EM Seg" src="images/header.jpg">
+      </img>
+     </div>
+     <div class="home-text">
+      <p>
+       <b>
+        Computational Neuroanatomy Lab
+       </b>
+       , led by Dr. Ali Abdollahzadeh, is affiliated with the A.I. Virtanen Institute for Molecular Sciences at the University of Eastern Finland.
+       <br/>
+       We seek to understand the statistical properties and organizational principles of brain tissue microstructures fundamental to understanding the macroscopic diffusion MRI signal, thereby effectively spanning 2-3 orders of magnitudes in resolution.
+       <br/>
+       For this purpose, we have introduced an innovative family of computational tools, e.g.,
+       <b>
+        ACSON, DeepACSON, gACSON
+       </b>
+       , and
+       <b>
+        Skeletonize
+       </b>
+       , tailored for the segmentation and morphology analysis of large electron microscopy volumes. These developments unlocked accessing the realistic geometry of white matter tissue microstructures.
+       <br/>
+       With Prof. Novikov, we have recently developed the
+       <b>
+        scattering framework
+       </b>
+       for diffusion in a tube with varying cross-sectional area and uncovered the relevant parameters that govern the diffusive dynamics of water in axons.
+      </p>
+      <h3>
+       Funding
+      </h3>
+      <!-- Added header here -->
+      <p>
+       Research Council of Finland
+       <p>
+        <div class="home-aka">
+         <img alt="AKA" src="images/AKA.jpg"/>
         </div>
-        <div class="home-text">
-            <p>
-<b>Computational Neuroanatomy Lab</b>, led by Dr. Ali Abdollahzadeh, is affiliated with the A.I. Virtanen Institute for Molecular Sciences at the University of Eastern Finland.<br>
-We seek to understand the statistical properties and organizational principles of brain tissue microstructures fundamental to understanding the macroscopic diffusion MRI signal, thereby effectively spanning 2-3 orders of magnitudes in resolution.<br>
-For this purpose, we have introduced an innovative family of computational tools, e.g., <b>ACSON, DeepACSON, gACSON</b>, and <b>Skeletonize</b>, tailored for the segmentation and morphology analysis of large electron microscopy volumes. These developments unlocked accessing the realistic geometry of white matter tissue microstructures.<br>
-With Prof. Novikov, we have recently developed the <b>scattering framework</b> for diffusion in a tube with varying cross-sectional area and uncovered the relevant parameters that govern the diffusive dynamics of water in axons.</p>
-	<h3>Funding</h3> <!-- Added header here -->
-	<p>Research Council of Finland<p>
-	<div class="home-aka">
-            <img src="images/AKA.jpg" alt="AKA" />
-        </div>
-    
-        </div>
-    	</div>
-	</div>
-
-        <div id="team" class="section">
-            <!-- h2>Meet the Team</h2 -->
-            <!-- External content will be loaded here -->
-        </div>
-
-        <div id="publications" class="section">
-            <h2>Publications</h2>
-            <!-- External content will be loaded here -->
-        </div>
-
-	<div id="research" class="section">
-            <h2>Research</h2>
-            <!-- External content will be loaded here -->
-        </div>
-
-	<div id="resources" class="section">
-            <h2>Resources</h2>
-            <!-- External content will be loaded here -->
-        </div>
-
-        <div id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Principal Investigator: Ali Abdollahzadeh, PhD<br>
-            Computational Neuroanatomy Lab <br>
-            University of Eastern Finland | UEF | A.I. Virtanen Institute for Molecular Sciences<br>
-            Neulaniementie 2 | P.O. Box 1627 | 70211 Kuopio | Finland<br>
-            Email: aliabd#uef.fi#
-            </p>
-        </div>
-        
+       </p>
+      </p>
+     </div>
     </div>
-    <footer>
-	    <p>&copy; 2024 Computational Neuroanatomy Lab | All rights reserved.</p>
-    </footer>
-</body>
+   </div>
+   <div class="section" id="team">
+    <!-- h2>Meet the Team</h2 -->
+    <!-- External content will be loaded here -->
+   </div>
+   <div class="section" id="publications">
+    <h2>
+     Publications
+    </h2>
+    <!-- External content will be loaded here -->
+   </div>
+   <div class="section" id="research">
+    <h2>
+     Research
+    </h2>
+    <!-- External content will be loaded here -->
+   </div>
+   <div class="section" id="resources">
+    <h2>
+     Resources
+    </h2>
+    <!-- External content will be loaded here -->
+   </div>
+   <div class="section" id="contact">
+    <h2>
+     Contact
+    </h2>
+    <p>
+     Principal Investigator: Ali Abdollahzadeh, PhD
+     <br/>
+     Computational Neuroanatomy Lab
+     <br/>
+     University of Eastern Finland | UEF | A.I. Virtanen Institute for Molecular Sciences
+     <br/>
+     Neulaniementie 2 | P.O. Box 1627 | 70211 Kuopio | Finland
+     <br/>
+     Email: aliabd#uef.fi#
+    </p>
+   </div>
+  </div>
+  <footer>
+   <p>
+    © 2024 Computational Neuroanatomy Lab | All rights reserved.
+   </p>
+  </footer>
+ </body>
 </html>
-
-
-
-
-
-
-
-
